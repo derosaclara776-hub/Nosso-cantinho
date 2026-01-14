@@ -1,257 +1,306 @@
 <!DOCTYPE html>
-<html>
-
-<h<!DOCTYPE html><html lang="pt-BR">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nosso Cantinho 💗</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400;500&display=swap');:root {
-  --rosa: #f7b7c7;
-  --rosa-claro: #fde7ee;
-  --vinho: #7a2e3a;
-  --branco: #fff;
-}
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400;500&display=swap');
 
-* { box-sizing: border-box; }
+    :root {
+      --rosa: #f7b7c7;
+      --rosa-claro: #fde7ee;
+      --vinho: #7a2e3a;
+      --branco: #fff;
+    }
 
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(180deg, var(--rosa-claro), #fff);
-  color: var(--vinho);
-}
+    * { box-sizing: border-box; margin:0; padding:0; }
 
-/* TELA DE LOGIN */
-#login {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, #f9c5d1, #fde7ee);
-}
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, var(--rosa-claro), #fff);
+      color: var(--vinho);
+    }
 
-.login-box {
-  background: var(--branco);
-  padding: 30px;
-  border-radius: 20px;
-  text-align: center;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-  max-width: 320px;
-  width: 100%;
-}
+    /* LOGIN */
+    #login {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #f9c5d1, #fde7ee);
+    }
 
-.login-box h1 {
-  font-family: 'Playfair Display', serif;
-  margin-bottom: 10px;
-}
+    .login-box {
+      background: var(--branco);
+      padding: 30px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      max-width: 320px;
+      width: 100%;
+    }
 
-.login-box input {
-  padding: 10px;
-  width: 100%;
-  border-radius: 10px;
-  border: 1px solid #ddd;
-  margin-top: 10px;
-  text-align: center;
-}
+    .login-box h1 {
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 10px;
+    }
 
-.login-box button {
-  margin-top: 15px;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 20px;
-  background: var(--rosa);
-  color: var(--vinho);
-  font-weight: 500;
-  cursor: pointer;
-}
+    .login-box input {
+      padding: 10px;
+      width: 100%;
+      border-radius: 10px;
+      border: 1px solid #ddd;
+      margin-top: 10px;
+      text-align: center;
+    }
 
-/* CONTEÚDO */
-#conteudo {
-  display: none;
-  padding: 20px;
-}
+    .login-box button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 20px;
+      background: var(--rosa);
+      color: var(--vinho);
+      font-weight: 500;
+      cursor: pointer;
+    }
 
-header {
-  text-align: center;
-  padding: 40px 20px 20px;
-}
+    /* CONTEÚDO */
+    #conteudo { display: none; padding: 20px; }
 
-header h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 2em;
-}
+    header { text-align: center; padding: 40px 20px 20px; }
+    header h2 { font-family: 'Playfair Display', serif; font-size: 2em; }
 
-section {
-  background: var(--branco);
-  border-radius: 25px;
-  padding: 20px;
-  margin: 20px 0;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-}
+    section {
+      background: var(--branco);
+      border-radius: 25px;
+      padding: 20px;
+      margin: 20px 0;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    }
 
-section h3 {
-  font-family: 'Playfair Display', serif;
-  margin-bottom: 10px;
-}
+    section h3 { font-family: 'Playfair Display', serif; margin-bottom: 10px; }
 
-/* GALERIA */
-.galeria {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 fotos por linha */
-  gap: 10px;
-}
+    /* GALERIA */
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+    .galeria img {
+      width: 100%;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
 
-.galeria img {
-  width: 100%;
-  height: 100px;   /* tamanho pequeno */
-  object-fit: cover;
-  border-radius: 12px;
-}
-/* CARTINHAS */
-.carta {
-  background: #fff0f5;
-  border-radius: 20px;
-  padding: 22px;
-  margin-bottom: 15px;
+    /* CARTINHAS */
+    .carta {
+      background: #fff0f5;
+      border-radius: 20px;
+      padding: 22px;
+      margin-bottom: 15px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      font-style: italic;
+      font-size: 13px;
+      line-height: 1.8;
+    }
 
-  max-width: 700.carta {
-  background: #fff0f5;
-  border-radius: 20px;
-  padding: 22px;
-  margin-bottom: 15px;
+    audio { width: 100%; margin-top: 10px; }
 
-  max-width: 700px;   /* AQUI deixa mais largo */
-  margin-left: auto;
-  margin-right: auto;
+    footer {
+      text-align: left;
+      font-size: 12px;
+      opacity: 0.6;
+      margin: 30px 0 10px;
+    }
 
-  font-style: italic;
-  font-size: 13px;    /* letra delicada */
-  line-height: 1.8;   /* espaço bonito entre linhas */
-}px;   /* AQUI deixa mais largo */
-  margin-left: auto;
-  margin-right: auto;
-
-  font-style: italic;
-  font-size: 13px;    /* letra delicada */
-  line-height: 1.8;   /* espaço bonito entre linhas */
-}
-/* PLAYER */
-audio {
-  width: 100%;
-  margin-top: 10px;
-}
-
-footer {
-  text-align: left;
-  font-size: 12px;
-  opacity: 0.6;
-  margin: 30px 0 10px;
-}
-.contador-tempo {
-  text-align: center;
-  margin: 25px 0;
-  font-size: 14px;
-  color: #7a2e3a;
-  font-style: italic;
-}
-
-.contador-tempo span {
-  font-weight: 600;
-}#dias, #horas, #minutos, #segundos {
-  font-size: 40px;   /* aumenta o tamanho da fonte */
-  font-weight: bold;  /* deixa os números mais destacados */
-  color: #7a2e3a;    /* cor bonita, você pode mudar */
-}
+    /* CONTADOR */
+    .contador-tempo {
+      text-align: center;
+      margin: 25px 0;
+      font-size: 14px;
+      color: #7a2e3a;
+      font-style: italic;
+    }
+    .contador-tempo span {
+      font-weight: 600;
+      font-size: 40px;
+    }
   </style>
 </head>
-<body>  <!-- LOGIN -->  <div id="login">
-    <div class="login-box">
-      <h1>💗 Nosso Segredo</h1>
-      <p>Digite a senha para entrar</p>
-      <input type="password" id="senha" placeholder="Senha" />
-      <button onclick="entrar()">Entrar</button>
-      <p id="erro" style="color:red; display:none;">Senha incorreta</p>
-    </div>
-  </div>  <!-- CONTEÚDO -->  <div id="conteudo">
-    <header>
-      <h2>Nosso Cantinho 💕</h2>
-      <p>Um lugar só nosso, cheio de amor, memórias e carinho.</p>
-    </header><section>
-  <h3>Nossa música: Sunshine - Delacruz </h3>
-  <p>"Você sempre será o meu Sunshine!
+<body>
+
+<!-- LOGIN -->
+<div id="login">
+  <div class="login-box">
+    <h1>💗 Nosso Segredo</h1>
+    <p>Digite a senha para entrar</p>
+    <input type="password" id="senha" placeholder="Senha" />
+    <button onclick="entrar()">Entrar</button>
+    <p id="erro" style="color:red; display:none;">Senha incorreta</p>
+  </div>
+</div>
+
+<!-- CONTEÚDO -->
+<div id="conteudo">
+  <header>
+    <h2>Nosso Cantinho 💕</h2>
+    <p>Um lugar só nosso, cheio de amor, memórias e carinho.</p>
+  </header>
+
+  <section>
+    <h3>Nossa música: Sunshine - Delacruz</h3>
+  <p>"Você sempre será o meu Sunshine!"
   
   Sunshine significa luz do sol, brilho do sol ou calor e alegria que o sol proporciona, sendo também um apelido carinhoso para alguém que ilumina a vida de outra pessoa, como um "raio de sol".</p>
-  <!-- Substitua o arquivo pela sua música -->
-  <audio controls>
-    <source src="sunshine.mp3" type="audio/mpeg">
-    Seu navegador não suporta áudio.
-  </audio>
-</section>
+    <audio controls>
+      <source src="sunshine.mp3" type="audio/mpeg">
+      Seu navegador não suporta áudio.
+    </audio>
+  </section>
 
-<section>
-  <h3>📸 Nossos Momentos</h3>
-  <div class="galeria">
-  <img src="foto1.jpg" alt="Nós dois">
-  <img src="foto2.jpg" alt="Nosso momento">
-  <img src="foto3.jpg" alt="">
-  <img src="foto4.jpg" alt="lembrança maravilhosa">
-  <img src="foto5.jpg" alt="Lembrança linda">
-  <img src="foto6.jpg" alt="Amor">
-</div>
-</section>
+  <section>
+    <h3>📸 Nossos Momentos</h3>
+    <div class="galeria">
+      <img src="foto1.jpg" alt="Nós dois">
+      <img src="foto2.jpg" alt="Nosso momento">
+      <img src="foto3.jpg" alt="">
+      <img src="foto4.jpg" alt="lembrança maravilhosa">
+      <img src="foto5.jpg" alt="Lembrança linda">
+      <img src="foto6.jpg" alt="Amor">
+    </div>
+  </section>
 
-<section>
-  <h3>💌como tudo começou.</h3>
-  <div class="carta"</p>Amor, hoje é o seu grande dia, mas quem acaba ganhando o maior presente de todos sou eu e é incrível acordar e pensar "encontrei meu único e grande amor", mas antes de escrever esse mini texto queria relembrar de onde tudo começou.</p>
+  <section>
+    <h3>💌 Como tudo começou</h3>
+    <div class="carta">
+      </p>Amor, hoje é o seu grande dia, mas quem acaba ganhando o maior presente de todos sou eu, e é incrível acordar e pensar "encontrei meu único e grande amor", mas antes de escrever esse mini texto queria relembrar de onde tudo começou.</p>
 
-      </p>Para mim ano passado tinha tudo para ser bom, escola nova, pessoas novas, tudo novo, mas aconteceu tudo menos o que eu achei que aconteceria. Em uma terça qualquer apareceu uma pessoa, uma pessoa que me fez ver o amor mesmo ele também não sabia o que era. Veio com um papo pra sala toda de que não tinha escola, eu pensei: "Pura mentira queria matar aula" pse omi kakkakaka.</p>
+      </p>Para mim ano passado, tinha tudo para ser bom, escola nova, pessoas novas, tudo novo, mas aconteceu tudo menos o que eu achei que aconteceria. Em uma terça qualquer apareceu uma pessoa, uma pessoa que me fez ver o amor mesmo ele também não sabendo o que era. Veio com um papo pra sala toda de que não tinha escola, eu pensei: "Pura mentira queria matar aula" pse omi kakkakaka.</p>
 
-    </p>Passou um bom tempo e chegou Maio onde eu estava sem par na Festa Junina eu não queria perder de ponto de graça e adivinha??? Você também estava sem par. Pedi pra perguntarem pra você se você queria dançar comigo na hora você fez uma cara tão feia, fiquei a semana toda pensando que você não queria dançar comigo, mas clarinho que sim que você quis. Chegaram os ensaios, lembro até hoje as trocas de olhares tímidas até que aos poucos eu pude ser a Clarinha com você, mas claro com um pé atrás mas aos poucos me entreguei.</p>
+    </p>Passou um bom tempo e chegou Maio onde eu estava sem par na Festa Junina eu não queria perder ponto de graça e adivinha??? Você também estava sem par. Pedi pra perguntarem pra você se você queria dançar comigo na hora você fez uma cara tão feia, fiquei a semana toda pensando que você não queria dançar comigo, mas clarinho que sim que você quis. Chegaram os ensaios, lembro até hoje as trocas de olhares tímidas até que aos poucos eu pude ser a Clarinha com você, mas claro com um pé atrás mas aos poucos me entreguei.</p>
 
-     </p>Meu vício quero jogar truco sabe por quê? Por que queria ficar com você, minha alma te ama muito antes daquela terça, pois sempre sonhei com meu príncipe independente de quem era, mas já o amava só não reconhecia que era você. Até que veio o meu primeiro não, Deus pensou: "O QUE CLARA???? Você sempre me pediu ele e não vai aceitar? Nada disso". Pois o bem fizeram o mapeamento e eu sentei na sua frente engraçado né? Destino? Coincidência? Jamais!</p>
+     </p>Meu vício quero jogar truco sabe por quê? Por que queria ficar com você, minha alma te ama muito antes daquela terça, pois sempre sonhei com meu príncipe independente de quem era, mas já o amava só não reconhecia que era você. Até que veio o meu primeiro não, Deus pensou: "O QUE CLARA???? Você sempre me pediu ele e não vai aceitar? Nada disso". Pois bem fizeram o mapeamento e eu sentei na sua frente engraçado né? Destino? Coincidência? Jamais!</p>
 
      </p> E infelizmente ou felizmente, você lutou bastante pro meu sim e por incrível que pareça deu certo viu e ainda dará por que nosso amor vai além dessa vida. Nosso amor não vai acabar, nem pós-morte por quê eu te amo com a alma e a alma não morre.</div>
-  <div class="carta">E se um dia você esquecer o quanto é amado, quero que lembre dessas palavras. Quero que lembre que existe alguém no mundo que te escolhe todos os dias, mesmo nos dias difíceis, mesmo quando tudo parece pesado demais. Alguém que te vê além dos erros, além do cansaço, além dos medos que você tenta esconder. Eu te vejo inteiro. Vejo sua força, mas também suas fragilidades — e amo cada parte delas.</P>
+    <div class="carta">
+      E se um dia você esquecer o quanto é amado, quero que lembre dessas palavras. Quero que lembre que existe alguém no mundo que te escolhe todos os dias, mesmo nos dias difíceis, mesmo quando tudo parece pesado demais. Alguém que te vê além dos erros, além do cansaço, além dos medos que você tenta esconder. Eu te vejo inteiro. Vejo sua força, mas também suas fragilidades,e amo cada parte delas.</P>
 </P>Você não faz ideia do quanto mudou a minha vida. Antes de você, eu existia. Depois de você, eu comecei a viver de verdade. Você me ensinou que amor não é só sentir, é cuidar, é ficar, é segurar a mão quando tudo desmorona. É escolher permanecer mesmo quando seria mais fácil ir embora. E eu fico. Eu sempre fico.</P>
-</P>Quero que saiba que, quando o mundo pesar demais, você pode descansar em mim. Quando ninguém entender o que se passa dentro do seu coração, eu vou estar aqui tentando entender, mesmo em silêncio. Quando você achar que não é suficiente, eu vou ser a voz que te lembra de tudo o que você é. Porque você é incrível. Você é raro. Você é amor. E saiba que nãofoi fácil escrever pra você,  chorei da primeira palavra atéa última, EU TE AMO MUITOOOOOOO!</P></div>
+</P>Quero que saiba que, quando o mundo pesar demais, você pode descansar em mim. Quando ninguém entender o que se passa dentro do seu coração, eu vou estar aqui tentando entender, mesmo em silêncio. Quando você achar que não é suficiente, eu vou ser a voz que te lembra de tudo o que você é. Porque você é incrível. Você é raro. Você é amor. E saiba que não foi fácil escrever pra você,  chorei da primeira palavra até a última, e isso descreve o quanto EU TE AMO MUITOOOOOOO!</P></div>
+  </section>
+
+  <div id="contador" class="contador-tempo">
+    💕 Estamos juntos há<br>
+    <span id="tempo"></span>
+  </div>
+
+<section><section>
+  <h3>🎵 Quiz do nosso amor 💖</h3>
+  <div id="quizContainer">
+    <p id="pergunta"></p>
+    <div id="botoes"></div>
+    <p id="respostaQuiz" style="margin-top:10px; font-style: italic;"></p>
+  </div>
 </section>
-<div id="contador" class="contador-tempo">
-  💕 Estamos juntos há<br>
-  <span id="tempo"></span>
+
+<script>
+const perguntas = [
+  {pergunta: "Qual é a nossa música?", respostas: ["A. Sunshine - Delacruz", "B. Outra música", "C. Música qualquer", "D. Nenhuma"], correta: 0},
+  {pergunta: "Quem disse 'eu te amo' primeiro?", respostas: ["A. Você", "B. Eu", "C. Nós juntos", "D. Ninguém ainda"], correta: 0},
+  {pergunta: "Quem sempre faz o outro rir mais?", respostas: ["A. Você", "B. Eu", "C. Ambos", "D. Nenhum"], correta: 2},
+  {pergunta: "Qual lugar queremos conhecer juntos?", respostas: ["A. Paris", "B. Praia", "C. O mundo", "D. Outro lugar"], correta: 2},
+  {pergunta: "Quem é mais esquecido(a)?", respostas: ["A. Você", "B. Eu", "C. Ambos", "D. Nenhum"], correta: 1},
+  {pergunta: "Quem tem mais mania engraçada?", respostas: ["A. Você", "B. Eu", "C. Ambos", "D. Nenhum"], correta: 1},
+  {pergunta: "Qual é a frase que define nosso amor?", respostas: ["A. Para sempre juntos", "B. Nosso amor é único", "C. Felicidade plena", "D. Todos"], correta: 3},
+  {pergunta: "Quem gosta mais de tirar fotos?", respostas: ["A. Você", "B. Eu", "C. Ambos", "D. Ninguém"], correta: 0},
+  {pergunta: "Quem é mais ciumento(a)?", respostas: ["A. Você", "B. Eu", "C. Ambos", "D. Nenhum"], correta: 0},
+  {pergunta: "Quem sempre planeja surpresas?", respostas: ["A. Você", "B. Eu", "C. Ambos", "D. Ninguém"], correta: 0}
+];
+
+let index = 0;
+let acertos = 0; // aqui vamos contar os acertos
+
+function mostrarPergunta() {
+  const q = perguntas[index];
+  document.getElementById("pergunta").innerText = q.pergunta;
+  const botoesDiv = document.getElementById("botoes");
+  botoesDiv.innerHTML = "";
+  document.getElementById("respostaQuiz").innerText = "";
+
+  q.respostas.forEach((r, i) => {
+    const btn = document.createElement("button");
+    btn.innerText = r;
+    btn.style.margin = "5px";
+    btn.style.padding = "8px 15px";
+    btn.style.borderRadius = "10px";
+    btn.style.border = "none";
+    btn.style.backgroundColor = "#f7b7c7";
+    btn.style.color = "#7a2e3a";
+    btn.style.cursor = "pointer";
+    btn.onclick = () => verificarResposta(i);
+    botoesDiv.appendChild(btn);
+  });
+}
+
+function verificarResposta(resposta) {
+  const q = perguntas[index];
+  const resDiv = document.getElementById("respostaQuiz");
+
+  if(resposta === q.correta){
+    resDiv.innerText = "💖 Acertou!";
+    resDiv.style.color = "#e91e63";
+    acertos++; // soma 1 acerto
+  } else {
+    resDiv.innerText = "💞 Quase! Mas você vai acertar na próxima!";
+    resDiv.style.color = "#ff4081";
+  }
+
+  index++;
+  if(index < perguntas.length){
+    setTimeout(mostrarPergunta, 1500);
+  } else {
+    setTimeout(() => {
+      const porcentagem = Math.round((acertos / perguntas.length) * 100);
+      document.getElementById("pergunta").innerText = "🎉 Você terminou o quiz do nosso amor!";
+      document.getElementById("botoes").innerHTML = "";
+      document.getElementById("respostaQuiz").innerText = `💖 Você nos conhece ${porcentagem}% como casal!`;
+    }, 1500);
+  }
+}
+
+mostrarPergunta();
+</script>
+</script>
+
+  <section>
+    <h3>✨ Detalhe Especial</h3>
+    <p>Esse site existe só porque a nossa história merece um lugar só dela.</p>
+  </section>
+
+  <footer>
+    Feito com amor 💗 | Só nosso
+  </footer>
 </div>
-<section>
-  <h3>✨ Detalhe Especial</h3>
-  <p>Esse site existe só porque a nossa história merece um lugar só dela.</p>
-</section>
 
-<footer>
-  Feito com amor 💗 | Só nosso
-</footer>
-
-  </div>  <script>
-    function entrar() {
-      const senha = document.getElementById('senha').value;
-      if (senha === '1701') {
-        document.getElementById('login').style.display = 'none';
-        document.getElementById('conteudo').style.display = 'block';
-      } else {
-        document.getElementById('erro').style.display = 'block';
-      }
+<script>
+  // LOGIN
+  function entrar() {
+    const senha = document.getElementById('senha').value;
+    if (senha === '1701') {
+      document.getElementById('login').style.display = 'none';
+      document.getElementById('conteudo').style.display = 'block';
+    } else {
+      document.getElementById('erro').style.display = 'block';
     }
-  </script></body>
-</html>ead>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
-</head>
+  }
 
-<body><script>
+  // CONTADOR EM TEMPO REAL
   function atualizarContador() {
-    const inicio = new Date(2025, 7, 24, 0, 0, 0); 
-    // mês começa do 0 → agosto = 7
-
+    const inicio = new Date(2025, 7, 24, 0, 0, 0); // agosto = 7
     const agora = new Date();
     const diferenca = agora - inicio;
 
@@ -267,7 +316,4 @@ footer {
   setInterval(atualizarContador, 1000);
   atualizarContador();
 </script>
-  
-</body>
 
-</html>
